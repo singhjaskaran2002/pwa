@@ -1,0 +1,12 @@
+<div *ngIf="loader" class="loader"></div>
+
+<div *ngIf="!loader" id="main">
+  <ng-container *ngFor="let new of news">
+    <a [href]="new.url" id="title">{{ new.title }}</a>
+    <br /><br />
+    <img class="responsive" [src]="new.urlToImage" />
+    <p id="content">{{ new.content }}</p>
+    <hr />
+    <br />
+  </ng-container>
+</div>
